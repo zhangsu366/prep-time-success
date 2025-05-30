@@ -16,10 +16,10 @@ const About = () => {
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About SAT Master</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Hill Scholars</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               We're dedicated to helping students achieve their highest potential on the SAT through 
-              personalized tutoring and proven educational strategies.
+              personalized in-person tutoring and proven educational strategies.
             </p>
           </div>
         </div>
@@ -49,8 +49,8 @@ const About = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-700 mb-6">
-                At SAT Master, we believe every student has the potential to excel. Our mission is to 
-                provide personalized, high-quality SAT preparation that adapts to each student's 
+                At Hill Scholars, we believe every student has the potential to excel. Our mission is to 
+                provide personalized, high-quality, In-person SAT preparation that adapts to each student's 
                 unique learning style and goals.
               </p>
               <p className="text-lg text-gray-700 mb-6">
