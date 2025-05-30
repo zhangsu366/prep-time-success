@@ -5,7 +5,7 @@ const Home = () => {
   const features = [{
     icon: Target,
     title: 'Personalized Learning',
-    description: 'Tailored tutoring sessions designed to address your specific strengths and weaknesses.'
+    description: 'Tailored tutoring sessions designed to address your specific strengths and weaknesses. Talent based - No grade requirements.'
   }, {
     icon: Users,
     title: 'Expert Tutors',
