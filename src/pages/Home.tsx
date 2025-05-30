@@ -96,18 +96,7 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => <div key={index} className="bg-gray-50 p-6 rounded-xl">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />)}
-                </div>
-                <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-gray-600">SAT Score: {testimonial.score}</div>
-                  </div>
-                </div>
-              </div>)}
+            {testimonials.map((testimonial, index) => {})}
           </div>
         </div>
       </section>
