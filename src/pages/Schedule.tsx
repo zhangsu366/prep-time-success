@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/components/ui/use-toast';
 
 const Schedule = () => {
   const [selectedDate, setSelectedDate] = useState('');
@@ -15,6 +17,8 @@ const Schedule = () => {
     currentScore: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const timeSlots = [
     '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
@@ -50,17 +54,59 @@ const Schedule = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
     
-    // Here you would typically send the data to your backend
-    console.log('Booking submitted:', {
-      date: selectedDate,
-      time: selectedTime,
-      subject: selectedSubject,
-      student: studentInfo
-    });
+    try {
+      const appointmentData = {
+        student_name: studentInfo.name,
+        student_email: studentInfo.email,
+        student_phone: studentInfo.phone,
+        student_grade: studentInfo.grade || null,
+        target_score: studentInfo.targetScore ? parseInt(studentInfo.targetScore) : null,
+        current_score: studentInfo.currentScore ? parseInt(studentInfo.currentScore) : null,
+        subject: selectedSubject,
+        appointment_date: selectedDate,
+        appointment_time: selectedTime,
+        status: 'scheduled'
+      };
+
+      console.log('Submitting appointment data:', appointmentData);
+
+      const { data, error } = await supabase
+        .from('appointments')
+        .insert([appointmentData])
+        .select();
+
+      if (error) {
+        console.error('Error creating appointment:', error);
+        toast({
+          title: "Error",
+          description: "Failed to schedule your session. Please try again.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      console.log('Appointment created successfully:', data);
+      
+      toast({
+        title: "Success!",
+        description: "Your SAT tutoring session has been scheduled successfully.",
+      });
+      
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -342,10 +388,10 @@ const Schedule = () => {
             
             <button
               type="submit"
-              disabled={!selectedDate || !selectedTime || !selectedSubject || !studentInfo.name || !studentInfo.email || !studentInfo.phone}
+              disabled={!selectedDate || !selectedTime || !selectedSubject || !studentInfo.name || !studentInfo.email || !studentInfo.phone || isSubmitting}
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
-              Schedule Session
+              {isSubmitting ? 'Scheduling...' : 'Schedule Session'}
             </button>
             
             <p className="text-sm text-gray-600 mt-4 text-center">
