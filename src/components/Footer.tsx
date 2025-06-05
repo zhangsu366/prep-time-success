@@ -14,7 +14,7 @@ const Footer = () => {
                 <BookOpen className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">SAT Master</h3>
+                <h3 className="text-xl font-bold">Hill Scholars</h3>
                 <p className="text-gray-400">Educational Services</p>
               </div>
             </div>
@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@satmaster.com</span>
+                <span>info@hillscholars.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
@@ -33,7 +33,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>123 Education St, Learning City, LC 12345</span>
+                <span>123 Education Street, Learning City, LC 12345</span>
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 SAT Master Educational Services. All rights reserved.</p>
+          <p>&copy; 2024 Hill Scholars Educational Services. All rights reserved.</p>
         </div>
       </div>
     </footer>
