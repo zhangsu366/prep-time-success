@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, Clock, Send, MessageCircle } from 'lucide-react';
 
@@ -107,21 +106,6 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* SAT Test Sample */}
-            <div className="mt-12">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">SAT Practice Sample</h3>
-              <div className="bg-white rounded-lg shadow-sm p-4">
-                <img 
-                  src="/lovable-uploads/174b790e-e407-4b80-8837-7df73acc1931.png" 
-                  alt="SAT Practice Question" 
-                  className="w-full rounded-lg"
-                />
-                <p className="text-sm text-gray-600 mt-2 text-center">
-                  Sample SAT Math Question - Practice makes perfect!
-                </p>
-              </div>
             </div>
 
             {/* FAQ Section */}
