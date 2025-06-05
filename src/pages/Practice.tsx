@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Clock, CheckCircle, XCircle, RotateCcw, BookOpen } from 'lucide-react';
 
@@ -54,6 +53,14 @@ const Practice = () => {
       options: ['A) 3', 'B) 5', 'C) 7', 'D) 9'],
       correct: 'A) 3',
       explanation: 'f(2) = 2(2)² - 3(2) + 1 = 8 - 6 + 1 = 3'
+    },
+    {
+      id: 6,
+      type: 'Math',
+      question: 'In the xy-plane, the graph of which of the following equations is a line with slope 2?',
+      options: ['A) y = 2x + 1', 'B) y = x + 2', 'C) y = 2x²', 'D) 2y = x + 1'],
+      correct: 'A) y = 2x + 1',
+      explanation: 'A line in slope-intercept form y = mx + b has slope m. In y = 2x + 1, the coefficient of x is 2, so the slope is 2.'
     }
   ];
 
