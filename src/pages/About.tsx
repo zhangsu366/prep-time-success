@@ -1,24 +1,17 @@
+
 import React from 'react';
 import { BookOpen, Users, Award, Target } from 'lucide-react';
+
 const About = () => {
-  const stats = [{
-    number: '500+',
-    label: 'Students Tutored',
-    icon: Users
-  }, {
-    number: '200+',
-    label: 'Avg. Score Increase',
-    icon: Target
-  }, {
-    number: '5+',
-    label: 'Years Experience',
-    icon: BookOpen
-  }, {
-    number: '98%',
-    label: 'Success Rate',
-    icon: Award
-  }];
-  return <div className="min-h-screen">
+  const stats = [
+    { number: '500+', label: 'Students Tutored', icon: Users },
+    { number: '200+', label: 'Avg. Score Increase', icon: Target },
+    { number: '5+', label: 'Years Experience', icon: BookOpen },
+    { number: '98%', label: 'Success Rate', icon: Award },
+  ];
+
+  return (
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +26,21 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="h-8 w-8 text-blue-600" />
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Mission Section */}
       <section className="py-20 bg-gray-50">
@@ -105,22 +112,27 @@ const About = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[{
-            name: 'Dr. Sarah Johnson',
-            role: 'Lead SAT Instructor',
-            education: 'Ph.D. in Mathematics, Harvard University',
-            experience: '8 years of SAT tutoring experience'
-          }, {
-            name: 'Michael Chen',
-            role: 'Reading & Writing Specialist',
-            education: 'M.A. in English Literature, Stanford University',
-            experience: '6 years of SAT prep experience'
-          }, {
-            name: 'Emily Rodriguez',
-            role: 'Math Specialist',
-            education: 'M.S. in Mathematics, MIT',
-            experience: '5 years of SAT math tutoring'
-          }].map((member, index) => <div key={index} className="bg-gray-50 p-6 rounded-xl text-center">
+            {[
+              {
+                name: 'Dr. Sarah Johnson',
+                role: 'Lead SAT Instructor',
+                education: 'Ph.D. in Mathematics, Harvard University',
+                experience: '8 years of SAT tutoring experience'
+              },
+              {
+                name: 'Michael Chen',
+                role: 'Reading & Writing Specialist',
+                education: 'M.A. in English Literature, Stanford University',
+                experience: '6 years of SAT prep experience'
+              },
+              {
+                name: 'Emily Rodriguez',
+                role: 'Math Specialist',
+                education: 'M.S. in Mathematics, MIT',
+                experience: '5 years of SAT math tutoring'
+              }
+            ].map((member, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl text-center">
                 <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
                   {member.name.split(' ').map(n => n[0]).join('')}
                 </div>
@@ -128,10 +140,13 @@ const About = () => {
                 <p className="text-blue-600 font-medium mb-3">{member.role}</p>
                 <p className="text-sm text-gray-600 mb-2">{member.education}</p>
                 <p className="text-sm text-gray-600">{member.experience}</p>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default About;
