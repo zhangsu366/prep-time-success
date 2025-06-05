@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { Mail, Phone, Clock, Send, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -41,20 +41,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '(555) 123-4567',
+      details: '(617) 819-5809',
       description: 'Call us Monday - Friday, 9 AM - 8 PM'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@satmaster.com',
+      details: 'szhang@hillscholars.com',
       description: 'We respond within 24 hours'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      details: '123 Education Street',
-      description: 'Learning City, LC 12345'
     },
     {
       icon: Clock,
@@ -113,6 +107,21 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* SAT Test Sample */}
+            <div className="mt-12">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">SAT Practice Sample</h3>
+              <div className="bg-white rounded-lg shadow-sm p-4">
+                <img 
+                  src="/lovable-uploads/174b790e-e407-4b80-8837-7df73acc1931.png" 
+                  alt="SAT Practice Question" 
+                  className="w-full rounded-lg"
+                />
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Sample SAT Math Question - Practice makes perfect!
+                </p>
+              </div>
             </div>
 
             {/* FAQ Section */}
