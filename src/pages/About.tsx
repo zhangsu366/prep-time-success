@@ -41,28 +41,21 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                At Hill Scholars, we believe every student has the potential to excel. Our mission is to 
-                provide personalized, high-quality, In-person SAT preparation that adapts to each student's 
-                unique learning style and goals.
-              </p>
-              <p className="text-lg text-gray-700 mb-6">
-                We don't just teach test-taking strategies – we build confidence, critical thinking 
-                skills, and academic foundations that serve students throughout their educational journey.
-              </p>
+              <p className="text-lg text-gray-700 mb-6">At Hill Scholars, we believe every student has the potential to excel. Our mission is to provide personalized, high-quality, affordable, In-person SAT preparation that adapts to each student's unique learning style and goals.</p>
+              <p className="text-lg text-gray-700 mb-6">We don't just teach test-taking strategies – we build interest, confidence, critical thinking skills, and academic foundations that serve students throughout their educational journey.</p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="bg-blue-600 w-2 h-2 rounded-full mt-2"></div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Personalized Approach</h4>
-                    <p className="text-gray-600">Every session is tailored to your specific needs and learning style.</p>
+                    <p className="text-gray-600">Every session is tailored to your specific needs and learning style. Whether you're just two months away from taking the SAT or looking to build a solid math foundation over the next several years, there's a personalized plan designed for you.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="bg-blue-600 w-2 h-2 rounded-full mt-2"></div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Proven Methods</h4>
-                    <p className="text-gray-600">Our strategies are based on years of experience and student success.</p>
+                    <p className="text-gray-600">Our strategies are based on years of experience and student success. All classes will be held in person because we are strong believers that in-person sessions provide the most effective and engaging learning experience, allowing for real-time feedback, deeper understanding, and stronger accountability.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -120,15 +113,7 @@ const About = () => {
             role: 'Math Specialist',
             education: 'M.S. in Mathematics, MIT',
             experience: '5 years of SAT math tutoring'
-          }].map((member, index) => <div key={index} className="bg-gray-50 p-6 rounded-xl text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                  {member.name.split(' ').map(n => n[0]).join('')}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                <p className="text-sm text-gray-600 mb-2">{member.education}</p>
-                <p className="text-sm text-gray-600">{member.experience}</p>
-              </div>)}
+          }].map((member, index) => {})}
           </div>
         </div>
       </section>
