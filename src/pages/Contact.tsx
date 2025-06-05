@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { Mail, Phone, Clock, Send, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -40,14 +41,20 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '(617) 819-5809',
+      details: '(555) 123-4567',
       description: 'Call us Monday - Friday, 9 AM - 8 PM'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'szhang@hillscholars.com',
+      details: 'info@satmaster.com',
       description: 'We respond within 24 hours'
+    },
+    {
+      icon: MapPin,
+      title: 'Address',
+      details: '123 Education Street',
+      description: 'Learning City, LC 12345'
     },
     {
       icon: Clock,
