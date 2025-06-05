@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { BookOpen, Users, Award, Target } from 'lucide-react';
+
 const About = () => {
   const stats = [{
     number: '500+',
@@ -18,7 +20,9 @@ const About = () => {
     label: 'Success Rate',
     icon: Award
   }];
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +37,23 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-blue-100 p-3 rounded-full">
+                    <stat.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Mission Section */}
       <section className="py-20 bg-gray-50">
@@ -99,24 +119,36 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[{
-            name: 'Dr. Sarah Johnson',
-            role: 'Lead SAT Instructor',
-            education: 'Ph.D. in Mathematics, Harvard University',
-            experience: '8 years of SAT tutoring experience'
-          }, {
-            name: 'Michael Chen',
-            role: 'Reading & Writing Specialist',
-            education: 'M.A. in English Literature, Stanford University',
-            experience: '6 years of SAT prep experience'
-          }, {
-            name: 'Emily Rodriguez',
-            role: 'Math Specialist',
-            education: 'M.S. in Mathematics, MIT',
-            experience: '5 years of SAT math tutoring'
-          }].map((member, index) => {})}
+              name: 'Dr. Sarah Johnson',
+              role: 'Lead SAT Instructor',
+              education: 'Ph.D. in Mathematics, Harvard University',
+              experience: '8 years of SAT tutoring experience'
+            }, {
+              name: 'Michael Chen',
+              role: 'Reading & Writing Specialist',
+              education: 'M.A. in English Literature, Stanford University',
+              experience: '6 years of SAT prep experience'
+            }, {
+              name: 'Emily Rodriguez',
+              role: 'Math Specialist',
+              education: 'M.S. in Mathematics, MIT',
+              experience: '5 years of SAT math tutoring'
+            }].map((member, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-10 w-10 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">{member.name}</h3>
+                <p className="text-blue-600 font-medium text-center mb-3">{member.role}</p>
+                <p className="text-gray-600 text-sm text-center mb-2">{member.education}</p>
+                <p className="text-gray-500 text-sm text-center">{member.experience}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default About;
