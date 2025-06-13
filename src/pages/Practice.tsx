@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Clock, CheckCircle, XCircle, RotateCcw, BookOpen } from 'lucide-react';
 
@@ -13,47 +12,47 @@ const Practice = () => {
     {
       id: 1,
       type: 'Math',
-      question: 'If 3x + 5 = 14, what is the value of x?',
-      options: ['A) 2', 'B) 3', 'C) 4', 'D) 5'],
-      correct: 'B) 3',
-      explanation: 'Solve for x: 3x + 5 = 14, so 3x = 9, therefore x = 3.'
+      question: 'If f(x) = x³ - 4x² + 6x - 24 and f(4) = 0, what are all the zeros of f(x)?',
+      options: ['A) 4, 2i√6, -2i√6', 'B) 4, 2√6, -2√6', 'C) 4, 2i, -2i', 'D) 4, 6, -6'],
+      correct: 'A) 4, 2i√6, -2i√6',
+      explanation: 'Since f(4) = 0, (x-4) is a factor. Using polynomial division: f(x) = (x-4)(x² + 24). Setting x² + 24 = 0 gives x = ±2i√6.'
     },
     {
       id: 2,
       type: 'Reading',
-      question: 'Based on the passage context, the word "meticulous" most nearly means:',
-      options: ['A) Careless', 'B) Detailed', 'C) Quick', 'D) Simple'],
-      correct: 'B) Detailed',
-      explanation: 'Meticulous means showing great attention to detail; very careful and precise.'
+      question: 'In the context of a literary analysis comparing modernist and postmodernist narratives, the author\'s use of "palimpsest" most nearly means:',
+      options: ['A) A chronological sequence', 'B) Layered, overwritten meanings', 'C) A clear, direct statement', 'D) An outdated technique'],
+      correct: 'B) Layered, overwritten meanings',
+      explanation: 'A palimpsest refers to a manuscript with layers of text, where earlier writing shows through. In literary analysis, it suggests multiple overlapping meanings and interpretations.'
     },
     {
       id: 3,
       type: 'Math',
-      question: 'What is the area of a circle with radius 4?',
-      options: ['A) 8π', 'B) 12π', 'C) 16π', 'D) 20π'],
-      correct: 'C) 16π',
-      explanation: 'Area = πr² = π(4)² = 16π'
+      question: 'In triangle ABC, if sin(A) = 3/5, sin(B) = 4/5, and the area of the triangle is 24, what is the length of side c?',
+      options: ['A) 10', 'B) 12', 'C) 15', 'D) 20'],
+      correct: 'A) 10',
+      explanation: 'Since sin(A) = 3/5 and sin(B) = 4/5, we have cos(A) = 4/5 and cos(B) = 3/5. Using sin(C) = sin(180° - A - B) = sin(A + B) = sin(A)cos(B) + cos(A)sin(B) = (3/5)(3/5) + (4/5)(4/5) = 1. So C = 90°. Area = (1/2)ab·sin(C) = (1/2)ab = 24, so ab = 48. Using Law of Sines: a/sin(A) = b/sin(B) gives a = 3k, b = 4k for some k. So 12k² = 48, k = 2. Thus a = 6, b = 8, and c = √(36 + 64) = 10.'
     },
     {
       id: 4,
       type: 'Writing',
-      question: 'Which sentence is grammatically correct?',
+      question: 'Which revision best improves the coherence and sophistication of this passage: "The researchers conducted experiments. The experiments were about memory. They found interesting results about how people remember things differently under stress."',
       options: [
-        'A) Neither the students nor the teacher were ready.',
-        'B) Neither the students nor the teacher was ready.',
-        'C) Neither the student nor the teachers were ready.',
-        'D) Neither the student nor the teachers was ready.'
+        'A) The researchers conducted memory experiments and found that people remember things differently under stress.',
+        'B) Researchers conducted experiments about memory, finding interesting results about how people remember things differently under stress.',
+        'C) The researchers\' memory experiments revealed significant variations in cognitive recall patterns under stress-induced conditions.',
+        'D) Memory experiments were conducted by researchers who found that stress affects how people remember.'
       ],
-      correct: 'B) Neither the students nor the teacher was ready.',
-      explanation: 'With "neither...nor," the verb agrees with the subject closest to it (teacher = singular).'
+      correct: 'C) The researchers\' memory experiments revealed significant variations in cognitive recall patterns under stress-induced conditions.',
+      explanation: 'Option C demonstrates the highest level of sophistication through precise terminology ("cognitive recall patterns," "stress-induced conditions") and eliminates redundancy while maintaining clarity and academic tone.'
     },
     {
       id: 5,
       type: 'Math',
-      question: 'If f(x) = 2x² - 3x + 1, what is f(2)?',
-      options: ['A) 3', 'B) 5', 'C) 7', 'D) 9'],
-      correct: 'A) 3',
-      explanation: 'f(2) = 2(2)² - 3(2) + 1 = 8 - 6 + 1 = 3'
+      question: 'If log₂(x) + log₄(x) + log₈(x) = 11, what is the value of x?',
+      options: ['A) 16', 'B) 32', 'C) 64', 'D) 128'],
+      correct: 'C) 64',
+      explanation: 'Convert to common base: log₂(x) + log₂(x)/2 + log₂(x)/3 = 11. This gives log₂(x)(1 + 1/2 + 1/3) = log₂(x)(11/6) = 11. Therefore log₂(x) = 6, so x = 2⁶ = 64.'
     }
   ];
 

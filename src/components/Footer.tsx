@@ -25,15 +25,15 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@hillscholars.com</span>
+                <span>szhang@hillscholars.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>(555) 123-4567</span>
+                <span>(617) 819-5809</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>123 Education Street, Learning City, LC 12345</span>
+                <span>Brookline, MA 02445</span>
               </div>
             </div>
           </div>
