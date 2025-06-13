@@ -41,20 +41,20 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '(555) 123-4567',
+      details: '(617) 819-5809',
       description: 'Call us Monday - Friday, 9 AM - 8 PM'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@satmaster.com',
+      details: 'szhang@hillscholars.com',
       description: 'We respond within 24 hours'
     },
     {
       icon: MapPin,
       title: 'Address',
-      details: '123 Education Street',
-      description: 'Learning City, LC 12345'
+      details: 'Brookline, MA 02445',
+      description: 'Professional tutoring services'
     },
     {
       icon: Clock,
