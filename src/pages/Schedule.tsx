@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
@@ -90,11 +89,35 @@ const Schedule = () => {
       }
 
       console.log('Appointment created successfully:', data);
-      
-      toast({
-        title: "Success!",
-        description: "Your SAT tutoring session has been scheduled successfully.",
+
+      // Send confirmation email
+      const { error: emailError } = await supabase.functions.invoke('send-confirmation-email', {
+        body: {
+          type: 'appointment',
+          name: studentInfo.name,
+          email: studentInfo.email,
+          phone: studentInfo.phone,
+          appointmentDetails: {
+            date: formatDate(selectedDate),
+            time: selectedTime,
+            subject: subjects.find(s => s.value === selectedSubject)?.label || selectedSubject,
+            duration: '50 minutes'
+          }
+        }
       });
+
+      if (emailError) {
+        console.error('Error sending confirmation email:', emailError);
+        toast({
+          title: "Session Scheduled!",
+          description: "Your session was scheduled successfully, but we couldn't send a confirmation email.",
+        });
+      } else {
+        toast({
+          title: "Success!",
+          description: "Your SAT tutoring session has been scheduled and a confirmation email has been sent.",
+        });
+      }
       
       setIsSubmitted(true);
     } catch (error) {
