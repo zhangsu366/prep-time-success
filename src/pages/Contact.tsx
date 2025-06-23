@@ -29,6 +29,24 @@ const Contact = () => {
     try {
       console.log('Contact form submitted:', formData);
 
+      // Save to database
+      const { error: dbError } = await supabase
+        .from('contact_inquiries')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone || null,
+            subject: formData.subject,
+            message: formData.message
+          }
+        ]);
+
+      if (dbError) {
+        console.error('Error saving to database:', dbError);
+        throw dbError;
+      }
+
       // Send confirmation email
       const { error: emailError } = await supabase.functions.invoke('send-confirmation-email', {
         body: {
@@ -44,8 +62,8 @@ const Contact = () => {
       if (emailError) {
         console.error('Error sending confirmation email:', emailError);
         toast({
-          title: "Message sent!",
-          description: "Your message was sent successfully, but we couldn't send a confirmation email.",
+          title: "Message saved!",
+          description: "Your message was saved successfully, but we couldn't send a confirmation email. We'll get back to you within 24 hours.",
         });
       } else {
         toast({
