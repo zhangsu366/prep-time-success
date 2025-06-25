@@ -101,7 +101,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const emailResponse = await resend.emails.send({
-      from: "Hill Scholars <onboarding@resend.dev>",
+      from: "Hill Scholars <szhang@hillscholars.com>",
       to: [requestData.email],
       subject: subject,
       html: htmlContent,
