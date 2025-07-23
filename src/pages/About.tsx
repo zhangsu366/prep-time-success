@@ -41,7 +41,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-700 mb-6">At Hill Scholars, we believe every student has the potential to excel. Our mission is to provide personalized, high-quality, affordable, In-person SAT preparation that adapts to each student's unique learning style and goals.</p>
+              <p className="text-lg text-gray-700 mb-6">At Hill Scholars, we believe every student has the potential to excel. Our mission is to provide personalized, high-quality, affordable, In-person SAT Math preparation that adapts to each student's unique learning style and goals.</p>
               <p className="text-lg text-gray-700 mb-6">We don't just teach test-taking strategies – we build interest, confidence, critical thinking skills, and academic foundations that serve students throughout their educational journey.</p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
