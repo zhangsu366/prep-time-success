@@ -19,11 +19,11 @@ const Practice = () => {
     },
     {
       id: 2,
-      type: 'Reading',
-      question: 'In the context of a literary analysis comparing modernist and postmodernist narratives, the author\'s use of "palimpsest" most nearly means:',
-      options: ['A) A chronological sequence', 'B) Layered, overwritten meanings', 'C) A clear, direct statement', 'D) An outdated technique'],
-      correct: 'B) Layered, overwritten meanings',
-      explanation: 'A palimpsest refers to a manuscript with layers of text, where earlier writing shows through. In literary analysis, it suggests multiple overlapping meanings and interpretations.'
+      type: 'Math',
+      question: 'A sphere has volume 288π cubic units. If the sphere is inscribed in a cube, what is the surface area of the cube?',
+      options: ['A) 216', 'B) 432', 'C) 864', 'D) 1728'],
+      correct: 'C) 864',
+      explanation: 'Volume = (4/3)πr³ = 288π, so r³ = 216, thus r = 6. The inscribed sphere touches each face of the cube, so the cube edge length = 2r = 12. Surface area = 6 × 12² = 864.'
     },
     {
       id: 3,
@@ -35,16 +35,11 @@ const Practice = () => {
     },
     {
       id: 4,
-      type: 'Writing',
-      question: 'Which revision best improves the coherence and sophistication of this passage: "The researchers conducted experiments. The experiments were about memory. They found interesting results about how people remember things differently under stress."',
-      options: [
-        'A) The researchers conducted memory experiments and found that people remember things differently under stress.',
-        'B) Researchers conducted experiments about memory, finding interesting results about how people remember things differently under stress.',
-        'C) The researchers\' memory experiments revealed significant variations in cognitive recall patterns under stress-induced conditions.',
-        'D) Memory experiments were conducted by researchers who found that stress affects how people remember.'
-      ],
-      correct: 'C) The researchers\' memory experiments revealed significant variations in cognitive recall patterns under stress-induced conditions.',
-      explanation: 'Option C demonstrates the highest level of sophistication through precise terminology ("cognitive recall patterns," "stress-induced conditions") and eliminates redundancy while maintaining clarity and academic tone.'
+      type: 'Math',
+      question: 'If the system of equations 2x + 3y = 7 and kx + 9y = 21 has infinitely many solutions, what is the value of k?',
+      options: ['A) 3', 'B) 6', 'C) 9', 'D) 12'],
+      correct: 'B) 6',
+      explanation: 'For infinitely many solutions, the equations must be proportional. The second equation is 3 times the first: 3(2x + 3y) = 3(7) gives 6x + 9y = 21. Therefore k = 6.'
     },
     {
       id: 5,
