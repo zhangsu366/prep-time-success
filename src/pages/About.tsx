@@ -24,10 +24,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Hill Scholars</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              We're dedicated to helping students achieve their highest potential on the SAT through 
-              personalized in-person tutoring and proven educational strategies.
-            </p>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">We’re committed to helping students build confidence and excel in math—both in school and on the SAT. Through personalized, in-person tutoring and proven strategies, we support learners at every level, tailoring our approach to meet individual needs. Whether it's mastering classroom math concepts or reaching top scores on the SAT, our goal is to help each student reach their full potential.</p>
           </div>
         </div>
       </section>
@@ -41,7 +38,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-700 mb-6">At Hill Scholars, we believe every student has the potential to excel. Our mission is to provide personalized, high-quality, affordable, In-person SAT Math preparation that adapts to each student's unique learning style and goals.</p>
+              <p className="text-lg text-gray-700 mb-6">At Hill Scholars, we believe every student has the potential to excel. Our mission is to provide personalized, high-quality, affordable, In-person Math preparation that adapts to each student's unique learning style and goals.</p>
               <p className="text-lg text-gray-700 mb-6">We don't just teach test-taking strategies – we build interest, confidence, critical thinking skills, and academic foundations that serve students throughout their educational journey.</p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
