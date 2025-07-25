@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, User, Calendar, BookOpen, Home, Info, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import hillScholarsLogo from '../assets/hill-scholars-logo.png';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -33,7 +32,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src={hillScholarsLogo} 
+              src="/lovable-uploads/3ebe132c-5c91-4261-a5bf-c705e4ca1ba4.png" 
               alt="Hill Scholars" 
               className="h-12 w-auto"
             />
