@@ -15,10 +15,7 @@ const Footer = () => {
                 <p className="text-gray-400">Educational Services</p>
               </div>
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              Empowering students to achieve their best SAT scores through personalized tutoring, 
-              comprehensive practice materials, and expert guidance.
-            </p>
+            <p className="text-gray-300 mb-4 max-w-md">Empowering students to achieve their best math scores through personalized tutoring, comprehensive practice materials, and expert guidance.</p>
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
