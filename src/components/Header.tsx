@@ -34,7 +34,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/3ebe132c-5c91-4261-a5bf-c705e4ca1ba4.png" 
               alt="Hill Scholars" 
-              className="h-12 w-auto"
+              className="h-36 w-auto"
             />
           </Link>
 
