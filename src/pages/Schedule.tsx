@@ -26,12 +26,10 @@ const Schedule = () => {
   ];
 
   const subjects = [
-    { value: 'grade2-4', label: 'Grade 2-4 Math', description: 'Basic arithmetic, introduction to fractions' },
-    { value: 'grade5-8', label: 'Grade 5-8 Math', description: 'Pre-algebra, decimals, percentages' },
-    { value: 'grade9', label: 'Grade 9 Math', description: 'Algebra I, linear equations' },
-    { value: 'grade10', label: 'Grade 10 Math', description: 'Geometry, proofs, trigonometry basics' },
-    { value: 'grade11', label: 'Grade 11 Math', description: 'Algebra II, advanced functions' },
-    { value: 'grade12', label: 'Grade 12 Math & SAT Prep', description: 'Pre-calculus, SAT Math preparation' }
+    { value: 'grade3-5', label: 'Grade 3-5 Math' },
+    { value: 'middle-school', label: 'Middle School Math' },
+    { value: 'high-school', label: 'High School Math' },
+    { value: 'sat-prep', label: 'SAT Math Prep' }
   ];
 
   const availableDates = () => {
@@ -325,7 +323,6 @@ const Schedule = () => {
                         />
                         <div>
                           <div className="font-medium text-gray-900">{subject.label}</div>
-                          <div className="text-sm text-gray-600">{subject.description}</div>
                         </div>
                       </label>
                     ))}
