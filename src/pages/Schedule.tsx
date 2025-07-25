@@ -26,10 +26,12 @@ const Schedule = () => {
   ];
 
   const subjects = [
-    { value: 'math', label: 'SAT Math', description: 'Algebra, Geometry, Statistics' },
-    { value: 'reading', label: 'SAT Reading', description: 'Reading Comprehension, Vocabulary' },
-    { value: 'writing', label: 'SAT Writing', description: 'Grammar, Essay Writing' },
-    { value: 'full', label: 'Full SAT Prep', description: 'Comprehensive preparation' }
+    { value: 'grade2-4', label: 'Grade 2-4 Math', description: 'Basic arithmetic, introduction to fractions' },
+    { value: 'grade5-8', label: 'Grade 5-8 Math', description: 'Pre-algebra, decimals, percentages' },
+    { value: 'grade9', label: 'Grade 9 Math', description: 'Algebra I, linear equations' },
+    { value: 'grade10', label: 'Grade 10 Math', description: 'Geometry, proofs, trigonometry basics' },
+    { value: 'grade11', label: 'Grade 11 Math', description: 'Algebra II, advanced functions' },
+    { value: 'grade12', label: 'Grade 12 Math & SAT Prep', description: 'Pre-calculus, SAT Math preparation' }
   ];
 
   const availableDates = () => {
