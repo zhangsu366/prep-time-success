@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, User, Calendar, BookOpen, Home, Info, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import hillScholarsLogo from '../assets/hill-scholars-logo.png';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -30,14 +31,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-blue-600 text-white p-2 rounded-lg">
-              <BookOpen className="h-6 w-6" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-gray-900">Hill Scholars</h1>
-              <p className="text-sm text-gray-600">Educational Services</p>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={hillScholarsLogo} 
+              alt="Hill Scholars" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
