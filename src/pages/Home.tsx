@@ -9,7 +9,7 @@ const Home = () => {
   }, {
     icon: Users,
     title: 'Expert Tutors',
-    description: 'Learn from experienced educators with proven track records of SAT success.'
+    description: 'Learn from experienced educators with proven track records in math education and SAT success.'
   }, {
     icon: Clock,
     title: 'Flexible Scheduling',
@@ -39,12 +39,12 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Master the SAT with
+                Master Math with
                 <span className="text-blue-200"> Expert Tutoring</span>
               </h1>
               <p className="text-xl text-blue-100 mb-8">
-                Boost your SAT scores with personalized 1-on-1 tutoring sessions. 
-                Our proven methods help students achieve their college dreams.
+                Excel in SAT math and school math with personalized 1-on-1 tutoring sessions. 
+                Our proven methods help students achieve academic success and college readiness.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/schedule" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center justify-center group">
@@ -68,10 +68,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our SAT Tutoring?
+              Why Choose Our Math Tutoring?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine expert instruction with personalized attention to help you achieve your best possible SAT score.
+              We combine expert instruction with personalized attention to help you excel in both SAT math and school math.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -95,10 +95,10 @@ const Home = () => {
       <section className="py-20 bg-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Boost Your SAT Score?
+            Ready to Excel in Math?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of students who have achieved their dream scores with our expert tutoring.
+            Join hundreds of students who have achieved success in both SAT math and school math with our expert tutoring.
           </p>
           <Link to="/schedule" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
             Schedule Your Free Consultation
