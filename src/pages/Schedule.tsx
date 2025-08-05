@@ -106,10 +106,13 @@ const Schedule = () => {
                       <SelectValue placeholder="Select grade level" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="9">9th Grade</SelectItem>
-                      <SelectItem value="10">10th Grade</SelectItem>
-                      <SelectItem value="11">11th Grade</SelectItem>
-                      <SelectItem value="12">12th Grade</SelectItem>
+                      <SelectItem value="k-2">Grade K-2</SelectItem>
+                      <SelectItem value="3-5">Grade 3-5</SelectItem>
+                      <SelectItem value="6-8">Grade 6-8</SelectItem>
+                      <SelectItem value="9">Grade 9</SelectItem>
+                      <SelectItem value="10">Grade 10</SelectItem>
+                      <SelectItem value="11">Grade 11</SelectItem>
+                      <SelectItem value="12">Grade 12</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -148,10 +151,13 @@ const Schedule = () => {
                     <SelectValue placeholder="Select subject area" />
                   </SelectTrigger>
                   <SelectContent>
+                    <SelectItem value="grade-k2-math">Grade K-2 Math</SelectItem>
                     <SelectItem value="grade3-5-math">Grade 3-5 Math</SelectItem>
                     <SelectItem value="middle-school-math">Middle School Math</SelectItem>
                     <SelectItem value="high-school-math">High School Math</SelectItem>
                     <SelectItem value="sat-math-prep">SAT Math Prep</SelectItem>
+                    <SelectItem value="gre-math-prep">GRE Math Prep</SelectItem>
+                    <SelectItem value="gmat-math-prep">GMAT Math Prep</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
