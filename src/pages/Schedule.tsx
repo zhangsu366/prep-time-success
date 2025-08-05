@@ -62,27 +62,10 @@ const Schedule = () => {
         </Card>
 
         {/* Calendly Widget */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Select Your Session Time</CardTitle>
-            <CardDescription>
-              Choose a convenient time slot for your tutoring session
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {/* Calendly inline widget begin */}
-            <div className="calendly-inline-widget" data-url="https://calendly.com/susu2966/30min" style={{
-            minWidth: '320px',
-            height: '700px'
-          }}></div>
-            {/* Calendly inline widget end */}
-          </CardContent>
-        </Card>
+        
 
         <div className="mt-6 text-center">
-          <p className="text-sm text-gray-600">
-            Having trouble booking? Please <a href="/contact" className="text-blue-600 hover:text-blue-800">contact us</a> directly.
-          </p>
+          
         </div>
       </div>
     </div>;
