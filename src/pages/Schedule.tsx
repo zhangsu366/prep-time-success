@@ -43,7 +43,7 @@ const Schedule = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Schedule Your Math Tutoring Session</h1>
-          <p className="text-xl text-gray-600">Fill out your information below and get your personalized 30-minute pre-evaluation session</p>
+          <p className="text-xl text-gray-600">Fill out your information below and get your personalized 30-minute pre-evaluation session.</p>
         </div>
 
         {/* Google Form */}
