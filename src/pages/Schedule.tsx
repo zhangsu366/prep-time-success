@@ -44,128 +44,26 @@ const Schedule = () => {
           </p>
         </div>
 
-        {/* Student Information Form */}
+        {/* Google Form */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Student Information</CardTitle>
             <CardDescription>
-              Please provide your details before selecting a time slot
+              Please fill out the form below to get started
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="studentName">Student Name *</Label>
-                  <Input
-                    id="studentName"
-                    {...register('studentName', { required: 'Student name is required' })}
-                    className="mt-1"
-                  />
-                  {errors.studentName && (
-                    <p className="text-red-600 text-sm mt-1">{errors.studentName.message as string}</p>
-                  )}
-                </div>
-
-                <div>
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    {...register('email', { 
-                      required: 'Email is required',
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: 'Invalid email address'
-                      }
-                    })}
-                    className="mt-1"
-                  />
-                  {errors.email && (
-                    <p className="text-red-600 text-sm mt-1">{errors.email.message as string}</p>
-                  )}
-                </div>
-
-                <div>
-                  <Label htmlFor="phone">Phone Number *</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    {...register('phone', { required: 'Phone number is required' })}
-                    className="mt-1"
-                  />
-                  {errors.phone && (
-                    <p className="text-red-600 text-sm mt-1">{errors.phone.message as string}</p>
-                  )}
-                </div>
-
-                <div>
-                  <Label htmlFor="grade">Grade Level *</Label>
-                  <Select onValueChange={(value) => setValue('grade', value)}>
-                    <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Select grade level" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="k-2">Grade K-2</SelectItem>
-                      <SelectItem value="3-5">Grade 3-5</SelectItem>
-                      <SelectItem value="6-8">Grade 6-8</SelectItem>
-                      <SelectItem value="9">Grade 9</SelectItem>
-                      <SelectItem value="10">Grade 10</SelectItem>
-                      <SelectItem value="11">Grade 11</SelectItem>
-                      <SelectItem value="12">Grade 12</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div>
-                  <Label htmlFor="currentScore">Current SAT Score</Label>
-                  <Input
-                    id="currentScore"
-                    type="number"
-                    min="400"
-                    max="1600"
-                    {...register('currentScore')}
-                    className="mt-1"
-                    placeholder="e.g., 1200"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="targetScore">Target SAT Score</Label>
-                  <Input
-                    id="targetScore"
-                    type="number"
-                    min="400"
-                    max="1600"
-                    {...register('targetScore')}
-                    className="mt-1"
-                    placeholder="e.g., 1500"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <Label htmlFor="subject">Subject Selection *</Label>
-                <Select onValueChange={(value) => setValue('subject', value)}>
-                  <SelectTrigger className="mt-1">
-                    <SelectValue placeholder="Select subject area" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="grade-k2-math">Grade K-2 Math</SelectItem>
-                    <SelectItem value="grade3-5-math">Grade 3-5 Math</SelectItem>
-                    <SelectItem value="middle-school-math">Middle School Math</SelectItem>
-                    <SelectItem value="high-school-math">High School Math</SelectItem>
-                    <SelectItem value="sat-math-prep">SAT Math Prep</SelectItem>
-                    <SelectItem value="gre-math-prep">GRE Math Prep</SelectItem>
-                    <SelectItem value="gmat-math-prep">GMAT Math Prep</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <Button type="submit" className="w-full">
-                Submit Information & Continue to Booking
-              </Button>
-            </form>
+            <iframe 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe4VxS20VRVacbdaErNyD7MactWTuNAEkQx7W4o9jNnynnf2w/viewform?embedded=true" 
+              width="100%" 
+              height="800" 
+              frameBorder="0" 
+              marginHeight={0} 
+              marginWidth={0}
+              className="rounded-lg"
+            >
+              Loading…
+            </iframe>
           </CardContent>
         </Card>
 
