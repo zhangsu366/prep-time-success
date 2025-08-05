@@ -54,7 +54,7 @@ const Schedule = () => {
           </CardHeader>
           <CardContent>
             <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSe4VxS20VRVacbdaErNyD7MactWTuNAEkQx7W4o9jNnynnf2w/viewform?embedded=true" 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe4VxS20VRVacbdaErNyD7MactWTuNAEkQx7W4o9jNnynnf2w/viewform?embedded=true&hl=en&pli=1"
               width="100%" 
               height="800" 
               frameBorder="0" 
