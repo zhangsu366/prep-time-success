@@ -1,21 +1,162 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { useToast } from '@/hooks/use-toast';
 
 const Schedule = () => {
+  const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm();
+  const { toast } = useToast();
+
+  const onSubmit = (data: any) => {
+    console.log('Form submitted:', data);
+    toast({
+      title: "Information Submitted",
+      description: "Please select a time slot below to complete your booking.",
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Schedule Your SAT Tutoring Session</h1>
           <p className="text-xl text-gray-600">
-            Fill out the form below to book a personalized 50-minute tutoring session with one of our expert instructors
+            Fill out your information below and then select a convenient time slot for your personalized 50-minute tutoring session
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="p-4">
-            <p className="text-sm text-gray-600 mb-4">
-              Select a convenient time slot below. Please ensure you have your student information ready including grade level and target scores.
-            </p>
+        {/* Student Information Form */}
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Student Information</CardTitle>
+            <CardDescription>
+              Please provide your details before selecting a time slot
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="studentName">Student Name *</Label>
+                  <Input
+                    id="studentName"
+                    {...register('studentName', { required: 'Student name is required' })}
+                    className="mt-1"
+                  />
+                  {errors.studentName && (
+                    <p className="text-red-600 text-sm mt-1">{errors.studentName.message as string}</p>
+                  )}
+                </div>
+
+                <div>
+                  <Label htmlFor="email">Email Address *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    {...register('email', { 
+                      required: 'Email is required',
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: 'Invalid email address'
+                      }
+                    })}
+                    className="mt-1"
+                  />
+                  {errors.email && (
+                    <p className="text-red-600 text-sm mt-1">{errors.email.message as string}</p>
+                  )}
+                </div>
+
+                <div>
+                  <Label htmlFor="phone">Phone Number *</Label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    {...register('phone', { required: 'Phone number is required' })}
+                    className="mt-1"
+                  />
+                  {errors.phone && (
+                    <p className="text-red-600 text-sm mt-1">{errors.phone.message as string}</p>
+                  )}
+                </div>
+
+                <div>
+                  <Label htmlFor="grade">Grade Level *</Label>
+                  <Select onValueChange={(value) => setValue('grade', value)}>
+                    <SelectTrigger className="mt-1">
+                      <SelectValue placeholder="Select grade level" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="9">9th Grade</SelectItem>
+                      <SelectItem value="10">10th Grade</SelectItem>
+                      <SelectItem value="11">11th Grade</SelectItem>
+                      <SelectItem value="12">12th Grade</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <Label htmlFor="currentScore">Current SAT Score</Label>
+                  <Input
+                    id="currentScore"
+                    type="number"
+                    min="400"
+                    max="1600"
+                    {...register('currentScore')}
+                    className="mt-1"
+                    placeholder="e.g., 1200"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="targetScore">Target SAT Score</Label>
+                  <Input
+                    id="targetScore"
+                    type="number"
+                    min="400"
+                    max="1600"
+                    {...register('targetScore')}
+                    className="mt-1"
+                    placeholder="e.g., 1500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <Label htmlFor="subject">Subject Selection *</Label>
+                <Select onValueChange={(value) => setValue('subject', value)}>
+                  <SelectTrigger className="mt-1">
+                    <SelectValue placeholder="Select subject area" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="grade3-5-math">Grade 3-5 Math</SelectItem>
+                    <SelectItem value="middle-school-math">Middle School Math</SelectItem>
+                    <SelectItem value="high-school-math">High School Math</SelectItem>
+                    <SelectItem value="sat-math-prep">SAT Math Prep</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <Button type="submit" className="w-full">
+                Submit Information & Continue to Booking
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+
+        {/* Calendly Widget */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Select Your Session Time</CardTitle>
+            <CardDescription>
+              Choose a convenient time slot for your tutoring session
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
             {/* Calendly inline widget begin */}
             <div 
               className="calendly-inline-widget" 
@@ -24,17 +165,13 @@ const Schedule = () => {
             ></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             {/* Calendly inline widget end */}
-          </div>
-          
-          <div className="bg-gray-50 px-6 py-4 border-t">
-            <p className="text-sm text-gray-600">
-              <strong>Please have ready:</strong> Student name, email, phone, grade (9-12), target score, current score, 
-              subject selection (Grade 3-5 Math, Middle School Math, High School Math, SAT Math Prep)
-            </p>
-            <p className="text-sm text-gray-600 mt-2">
-              Having trouble booking? Please <a href="/contact" className="text-blue-600 hover:text-blue-800">contact us</a> directly.
-            </p>
-          </div>
+          </CardContent>
+        </Card>
+
+        <div className="mt-6 text-center">
+          <p className="text-sm text-gray-600">
+            Having trouble booking? Please <a href="/contact" className="text-blue-600 hover:text-blue-800">contact us</a> directly.
+          </p>
         </div>
       </div>
     </div>
