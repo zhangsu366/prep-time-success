@@ -14,30 +14,25 @@ const Schedule = () => {
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="p-4">
             <p className="text-sm text-gray-600 mb-4">
-              Please complete all fields in the form below. You'll receive a confirmation email once your session is scheduled.
+              Select a convenient time slot below. Please ensure you have your student information ready including grade level and target scores.
             </p>
-            {/* Replace this iframe src with your actual Google Form embed URL */}
-            <iframe
-              src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
-              width="100%"
-              height="1200"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              title="Schedule SAT Tutoring Session"
-              className="border-0"
-            >
-              Loading form...
-            </iframe>
+            {/* Calendly inline widget begin */}
+            <div 
+              className="calendly-inline-widget" 
+              data-url="https://calendly.com/susu2966/30min" 
+              style={{minWidth: '320px', height: '700px'}}
+            ></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            {/* Calendly inline widget end */}
           </div>
           
           <div className="bg-gray-50 px-6 py-4 border-t">
             <p className="text-sm text-gray-600">
-              <strong>Form includes:</strong> Student name, email, phone, grade (9-12), target score, current score, 
-              subject selection (Grade 3-5 Math, Middle School Math, High School Math, SAT Math Prep), preferred dates and times
+              <strong>Please have ready:</strong> Student name, email, phone, grade (9-12), target score, current score, 
+              subject selection (Grade 3-5 Math, Middle School Math, High School Math, SAT Math Prep)
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              Having trouble with the form? Please <a href="/contact" className="text-blue-600 hover:text-blue-800">contact us</a> directly.
+              Having trouble booking? Please <a href="/contact" className="text-blue-600 hover:text-blue-800">contact us</a> directly.
             </p>
           </div>
         </div>
