@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,6 +10,21 @@ import { useToast } from '@/hooks/use-toast';
 const Schedule = () => {
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm();
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script when component unmounts
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   const onSubmit = (data: any) => {
     console.log('Form submitted:', data);
@@ -163,7 +178,6 @@ const Schedule = () => {
               data-url="https://calendly.com/susu2966/30min" 
               style={{minWidth: '320px', height: '700px'}}
             ></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             {/* Calendly inline widget end */}
           </CardContent>
         </Card>
