@@ -39,7 +39,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-1">
+          <nav className="flex-1 flex justify-center md:justify-end space-x-1">
             {navigation.map(item => <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center space-x-2 ${isActive(item.href) ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'}`}>
                 <item.icon className="h-4 w-4" />
                 <span>{item.name}</span>
