@@ -94,12 +94,9 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Excel in Math?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of students who have achieved success in both SAT math and school math with our expert tutoring.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Are You Ready?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">To achieve success in both SAT math and school math
+with our expert tutoring.</p>
           <Link to="/schedule" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
             Schedule Your Free Consultation
             <ArrowRight className="ml-2 h-5 w-5" />
