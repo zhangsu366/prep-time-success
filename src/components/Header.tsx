@@ -40,7 +40,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex flex-1 justify-center space-x-8 ml-8">
-            {navigation.map(item => <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center space-x-2 ${isActive(item.href) ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'}`}>
+            {navigation.map(item => <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg text-base font-medium transition-colors duration-200 flex items-center space-x-2 ${isActive(item.href) ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'}`}>
                 <item.icon className="h-4 w-4" />
                 <span>{item.name}</span>
               </Link>)}
